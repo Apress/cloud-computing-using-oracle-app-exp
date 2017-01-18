@@ -1,0 +1,10 @@
+declare
+   Verrortext varchar2(1000);
+begin
+   FOR i IN 1 .. apex_application.g_f02.COUNT LOOP
+      if (apex_application.g_f10(i) = 0 and apex_application.g_f11(i) = 0) OR (apex_application.g_f10(i) <= 0 and apex_application.g_f11(i) <= 0) OR (apex_application.g_f10(i) <> 0 and apex_application.g_f11(i) <> 0) OR (apex_application.g_f10(i) is null or apex_application.g_f11(i) is null) then
+         Verrortext := 'Row '||i||':&nbsp;&nbsp;Enter zero or a positive amount either in Debit or Credit.<br />';
+      end if;
+   END LOOP;
+   return rtrim(Verrortext,'<br />');
+end;

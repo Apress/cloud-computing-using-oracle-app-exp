@@ -1,0 +1,16 @@
+declare
+   Verrortext varchar2(1000);
+   Vtotaldebit number := 0;
+   Vtotalcredit number := 0;
+   Vdifference number := 0;
+begin
+   FOR i IN 1 .. apex_application.g_f02.COUNT LOOP
+      Vtotaldebit := Vtotaldebit + to_number(apex_application.g_f10(i));   
+      Vtotalcredit := Vtotalcredit + to_number(apex_application.g_f11(i));   
+   END LOOP;
+   if  Vtotaldebit <> Vtotalcredit then
+      Vdifference := Vtotaldebit - Vtotalcredit;
+      Verrortext := 'Voucher is not balanced - Debit='||Vtotaldebit||' Credit='||Vtotalcredit||' Difference='||Vdifference;
+   end if;
+   return rtrim(Verrortext);   
+end;

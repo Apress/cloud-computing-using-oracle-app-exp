@@ -1,0 +1,10 @@
+select "U"."ROWID", 
+"U"."USERID",
+"G"."GROUPTITLE",
+"C"."CONAME",
+"U"."COYEAR",
+"F"."COMONTHNAME",
+"U"."PASSWORD",
+"U"."ADMIN"
+from "GL_USERS" "U", "GL_GROUPS_MASTER" "G", "GL_COMPANY" "C", "GL_FISCAL_YEAR" "F"
+where "U"."COCODE"="C"."COCODE" and "U"."GROUPID"="G"."GROUPID" and "U"."COCODE"="F"."COCODE" and "U"."COYEAR"="F"."COYEAR" and "U"."COMONTHID"="F"."COMONTHID"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENT>
+<ROWSET>
+   <ROW>
+      <CONAME></CONAME>
+      <COACODE></COACODE>
+      <COATITLE></COATITLE>
+      <VCHDATE></VCHDATE>
+      <VCHTYPE></VCHTYPE>
+      <VCHNO></VCHNO>
+      <VCHDESCRIPTION></VCHDESCRIPTION>
+      <VCHDR></VCHDR>
+      <VCHCR></VCHCR>
+      <BALANCE></BALANCE>
+      <NOW></NOW>
+      <FROMDATE></FROMDATE>
+      <TODATE></TODATE>
+      <ACCOUNTFROM></ACCOUNTFROM>
+      <ACCOUNTTO></ACCOUNTTO>
+   </ROW>
+</ROWSET>
+</DOCUMENT>

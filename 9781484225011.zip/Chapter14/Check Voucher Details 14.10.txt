@@ -1,0 +1,12 @@
+declare
+   Vrecords number := 0;
+   Verrortext varchar2(60);
+begin
+   FOR i IN 1 .. apex_application.g_f02.COUNT LOOP -- select a visible tabular form column, else the validation won't execute
+      Vrecords := Vrecords + i;
+   END LOOP;
+   if Vrecords <= 1 then
+      Verrortext := 'No data defined in the details section';
+   end if;
+   return rtrim(Verrortext);
+end;

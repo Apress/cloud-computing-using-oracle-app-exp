@@ -1,0 +1,7 @@
+SELECT * FROM gl_fs_report WHERE upper(userid)=upper(:APP_USER) AND notes=0 AND reportcode=:P76_REPORTCODE ORDER BY srno
+
+
+SELECT * FROM gl_fs_report WHERE upper(userid)=upper(:APP_USER) AND notes=0 AND reportcode=:P76_REPORTCODE ORDER BY srno
+
+
+SELECT * FROM gl_fs_report WHERE upper(userid)=upper(:APP_USER) AND notes=1 AND reportcode=:P76_REPORTCODE ORDER BY srno

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENT>
+<ROWSET>
+   <ROW>
+      <CONAME></CONAME>
+      <VCHCODE></VCHCODE>
+      <VCHTITLE></VCHTITLE>
+      <VCHNO></VCHNO>
+      <VCHDATE></VCHDATE>
+      <VCHDESCRIPTION></VCHDESCRIPTION>
+      <CREATEDBY></CREATEDBY>
+      <CREATEDON></CREATEDON>
+      <LINE_NO></LINE_NO>
+      <COACODE></COACODE>
+      <COATITLE></COATITLE>
+      <CCCODE></CCCODE>
+      <CCTITLE></CCTITLE>
+      <VCHDR></VCHDR>
+      <VCHCR></VCHCR>
+      <VCHREFERENCE></VCHREFERENCE>
+      <NOW></NOW>
+   </ROW>
+</ROWSET>
+</DOCUMENT>

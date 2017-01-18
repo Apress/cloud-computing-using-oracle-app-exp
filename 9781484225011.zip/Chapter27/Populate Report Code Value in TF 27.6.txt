@@ -1,0 +1,11 @@
+if :P18_EXISTINGNEW='NEW' then
+   FOR i IN 1 .. apex_application.g_f02.COUNT LOOP
+      apex_application.g_f03(i) := :P18_REPORTCODE2;
+      apex_application.g_f04(i) := :P18_REPORTTITLE2;
+   END LOOP;
+else
+   FOR i IN 1 .. apex_application.g_f02.COUNT LOOP
+      apex_application.g_f03(i) := :P18_REPORTCODE1;
+      apex_application.g_f04(i) := :P18_REPORTTITLE1;
+   END LOOP;
+end if;

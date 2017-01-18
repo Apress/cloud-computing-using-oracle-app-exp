@@ -1,0 +1,62 @@
+-- Profit & Loss Statement Region
+SELECT null, accounttitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno BETWEEN 1 AND 11 ORDER BY srno
+
+-- P&L Report Region
+SELECT accounttitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno BETWEEN 1 AND 11 ORDER BY srno
+
+-- Revenues Trend
+SELECT null, accounttitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=1
+
+SELECT accounttitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=1
+
+-- Expenses Trend
+SELECT null, accounttitle, currentyear, previousyear FROM gl_dashboard WHERE userid=:APP_USER AND (srno=3 or srno=8 or srno=9 or srno=10)
+
+SELECT accounttitle, currentyear, previousyear FROM gl_dashboard 
+WHERE userid=:APP_USER and (srno=3 or srno=8 or srno=9 or srno=10)
+
+-- Gross Profit Ratio
+SELECT null, ratiotitle, current_year, previous_year 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=50
+
+SELECT ratiotitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=50
+
+-- Operating Profit Ratio
+SELECT null, ratiotitle, current_year, previous_year 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=52
+
+SELECT ratiotitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=52
+
+-- Net Profit Ratio
+SELECT null, ratiotitle, current_year, previous_year 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=53
+
+SELECT ratiotitle, currentyear, previousyear 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=53
+
+-- Current Ratio
+SELECT null, ratiotitle, current_year, previous_year 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=60
+
+SELECT accounttitle, currentyear, previousyear FROM gl_dashboard WHERE userid=:APP_USER AND (srno=60 or srno=61)
+
+-- Net Working Capital
+SELECT null, ratiotitle, current_year, previous_year 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=62
+
+SELECT accounttitle, currentyear, previousyear FROM gl_dashboard WHERE userid=:APP_USER AND (srno=60 or srno=61)
+
+-- Quick Ratio
+SELECT null, ratiotitle, current_year, previous_year 
+FROM gl_dashboard WHERE userid=:APP_USER AND srno=63
+
+SELECT accounttitle, currentyear, previousyear FROM gl_dashboard 
+WHERE userid=:APP_USER AND (srno=61 or srno=63) 
+ORDER BY srno DESC
+

@@ -1,0 +1,33 @@
+Select 
+CO.coname, 
+VM.Vchcode,
+VCH.Vchtitle,
+VM.Vchno,
+VM.Vchdate,
+VM.Vchdescription,
+VM.createdby,
+VM.createdon,
+VD.line_no,
+VD.COAcode,
+COA.COAtitle,
+VD.CCCode,
+CC.CCTitle,
+VD.Vchdr,
+VD.Vchcr,
+VD.Vchreference,
+(SELECT TO_CHAR(SYSDATE, 'DD-MON-YYYY HH24:MI:SS') FROM DUAL) NOW 
+From GL_COMPANY CO, GL_VOUCHER VCH, GL_COA COA, GL_COST_CENTER CC, GL_TRAN_MASTER VM, GL_TRAN_DETAIL VD 
+Where 
+VM.VchCode=:P71_VCHCODE AND 
+VM.Vchdate between :P71_VCHDATEFROM and :P71_VCHDATETO AND 
+VM.createdon between :P71_CREATEDFROM and :P71_CREATEDTO AND
+VM.vchno BETWEEN :P71_VCHNOFROM and :P71_VCHNOTO AND
+upper(VM.createdby)=upper(:P71_USERID) AND
+VM.cocode=(select cocode from GL_USERS where upper(userid)=upper(:APP_USER)) AND
+VM.cocode=CO.cocode AND
+VM.tran_no=VD.tran_no AND 
+VM.Vchcode=VCH.Vchcode AND 
+VD.cocode=COA.cocode AND
+VD.COAcode=COA.COAcode AND 
+VD.CCCode=CC.CCCode(+)
+ORDER BY VCHCODE,VCHNO,LINE_NO

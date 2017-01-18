@@ -1,0 +1,37 @@
+SELECT coname, cocode FROM gl_company ORDER BY cocode
+
+SELECT cocode FROM gl_users WHERE userid=:APP_USER
+
+SELECT DISTINCT(coyear) d, coyear r FROM gl_fiscal_year 
+WHERE cocode=:P6_COMPANY ORDER BY coyear
+
+SELECT coyear FROM gl_users WHERE userid=:APP_USER
+
+SELECT DISTINCT(comonthname) d, comonthid r 
+FROM gl_fiscal_year 
+WHERE cocode=:P6_COMPANY 
+ORDER BY comonthid
+
+SELECT comonthid FROM gl_users WHERE userid=:APP_USER
+
+SELECT cocode FROM gl_users WHERE userid=:APP_USER
+
+SELECT coname FROM gl_company 
+WHERE cocode=(select cocode from gl_users where upper(userid)=upper(:APP_USER))
+
+SELECT pfrom FROM gl_fiscal_year 
+WHERE cocode=:P6_COCODE and coyear=:P6_CURRENTYEAR and comonthid=1
+
+SELECT pto FROM gl_fiscal_year WHERE cocode=:P6_COCODE AND coyear=:P6_CURRENTYEAR AND comonthid=:P6_CURRENTMONTH
+
+SELECT pfrom FROM gl_fiscal_year 
+WHERE cocode=:P6_COCODE AND coyear=:P6_CURRENTYEAR-1 AND comonthid=1
+
+SELECT pto FROM gl_fiscal_year WHERE cocode=:P6_COCODE AND coyear=:P6_CURRENTYEAR-1 AND comonthid=:P6_CURRENTMONTH
+
+SELECT comonthname FROM gl_fiscal_year 
+WHERE cocode=:P6_COCODE AND coyear=:P6_CURRENTYEAR AND comonthid=:P6_CURRENTMONTH
+
+
+
+

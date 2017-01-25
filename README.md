@@ -1,6 +1,6 @@
 #Apress Source Code
 
-This repository accompanies [*Cloud Computing Using Oracle Application Express*](http://www.apress.com/9781484225011) by Ahmed, Riaz (Apress, 2016).
+This repository accompanies [*Cloud Computing Using Oracle Application Express*](http://www.apress.com/9781484225011) by Riaz Ahmed (Apress, 2016).
 
 ![Cover image](9781484225011.jpg)
 
